@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set base URL from environment variable
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'https://mern-user-system-ruddy.vercel.app';
 axios.defaults.withCredentials = true;
 
 let isRefreshing = false;
