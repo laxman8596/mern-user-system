@@ -11,6 +11,7 @@ import CreateTask from './pages/CreateTask';
 import AddUser from './pages/AddUser';
 import PrivateRoute from './components/PrivateRoute';
 import UserManagement from './components/UserManagement';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <AuthProvider>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
