@@ -7,11 +7,11 @@ import BackButton from '../components/BackButton';
 const AddUser = () => {
   const dispatch = useDispatch();
   const { auth } = useAuth();
-  const [formData, setFormData] = useState({ 
-    username: '', 
-    email: '', 
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
     password: '',
-    role: 'user'
+    role: 'user',
   });
 
   const handleInputChange = (e) => {
@@ -40,7 +40,7 @@ const AddUser = () => {
       <div className="bg-white rounded-lg shadow-xl p-6">
         <BackButton to="/admin" />
         <h2 className="text-3xl font-bold text-blue-700 mb-6">Add New User</h2>
-        
+
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -55,7 +55,7 @@ const AddUser = () => {
                 required
               />
             </div>
-            
+
             <div>
               <label className="block text-gray-700 font-medium mb-2">Email</label>
               <input
@@ -69,7 +69,7 @@ const AddUser = () => {
               />
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-gray-700 font-medium mb-2">Password</label>
@@ -83,7 +83,7 @@ const AddUser = () => {
                 required
               />
             </div>
-            
+
             <div>
               <label className="block text-gray-700 font-medium mb-2">Role</label>
               <select
@@ -97,7 +97,7 @@ const AddUser = () => {
               </select>
             </div>
           </div>
-          
+
           <div className="flex justify-end space-x-4">
             <button
               type="button"
@@ -114,7 +114,7 @@ const AddUser = () => {
             </button>
           </div>
         </form>
-        
+
         <div className="mt-8 p-4 bg-green-50 rounded-lg">
           <h3 className="text-lg font-semibold text-green-800 mb-2">Admin User Creation:</h3>
           <ul className="text-green-700 space-y-1">
