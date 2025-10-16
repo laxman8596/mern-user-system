@@ -74,12 +74,12 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/tasks', taskRoutes);
 
-// Export for Vercel
-export default app;
-
 // For local development
 if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
     });
 }
+
+// Export for Vercel
+export default app;
